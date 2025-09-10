@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Page</h1>
+        <p>Combining CSS3 Animations with JavaScript Functions</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Animation Showcase</div>
+            <div class="card-body">
+                <div class="animated-box" id="box"></div>
+                <div class="animated-circle" id="circle"></div>
+                <div class="animation-controls">
+                    <button class="btn" onclick="applyAnimation('box', 'pulse')">Pulse Box</button>
+                    <button class="btn" onclick="applyAnimation('circle', 'bounce')">Bounce Circle</button>
+                    <button class="btn btn-danger" onclick="resetAnimations()">Reset All</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Interactive Controls</div>
+            <div class="card-body">
+                <button class="btn" onclick="toggleSpin()">Toggle Spin Animation</button>
+                <button class="btn btn-success" onclick="showModal()">Open Modal</button>
+                <button class="btn" onclick="triggerShake()">Shake It!</button>
+                <div id="status" style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    Status: Ready
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Function Demonstrations</div>
+            <div class="card-body">
+                <button class="btn" onclick="calculateArea()">Calculate Area</button>
+                <button class="btn" onclick="stringManipulation()">String Manipulation</button>
+                <button class="btn" onclick="randomColor()">Random Color</button>
+                <div id="output" style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; min-height: 100px;">
+                    Output will appear here...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <h2>Animation Control Panel</h2>
+        <div class="animation-controls">
+            <button class="btn" onclick="startAnimations()">Start All Animations</button>
+            <button class="btn btn-danger" onclick="stopAnimations()">Stop All Animations</button>
+            <button class="btn" onclick="fadeInElements()">Fade In Elements</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Welcome to the Modal!</h2>
+            <p>This modal demonstrates CSS transitions combined with JavaScript triggers.</p>
+            <p>It fades in and slides up smoothly when opened.</p>
+            <button class="btn btn-danger" onclick="hideModal()" style="margin-top: 20px;">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Interactive Web Page with CSS Animations and JavaScript Functions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
